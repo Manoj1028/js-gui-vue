@@ -28,8 +28,8 @@
     <p>Enter Grade 3:
       <input v-model="thirdgrade" type="number">
     </p>
-    <p>average
-      <input v-model="average" type="number">
+    <p>average: 
+      <output v-model="add(X+Y+z)" type="number">
     </p>
 
     
@@ -45,7 +45,7 @@
     console.log('Declare testable functions.....................')
 
     function add(x, y,z) {
-      return x + y + z
+      return (x + y + z)/3
     }
     console.log('add=' + add)
 
@@ -64,7 +64,7 @@
           const i = parseInt(this.firstgrade)
           const j = parseInt(this.secondgarde)
           const k = parseInt(this.thirdgrade)
-          return this.grade + ', your average is ' + add((i, j, k)) + '.'
+          return this.add + ', your average is ' + add((i, j, k)/3) + '.'
         }
       }
     })
